@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "typedocOptions": {
+    "out": "docs"
+  },
+  "references": [{ "path": "../bsvalias-core", "prepend": false }],
+  "include": ["src", "types"]
+}

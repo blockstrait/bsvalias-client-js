@@ -1,0 +1,44 @@
+{
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "name": "@blockstrait/bsvalias-profile-client",
+  "author": "Pol Moreno Yeste",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "keywords": [
+    "bsv",
+    "bitcoin sv",
+    "bsvalias",
+    "paymail"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockstrait/bsvalias-client-js.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:ts",
+    "build:ts": "tsc -b .",
+    "test": "jest --passWithNoTests",
+    "clean": "rimraf -rf dist coverage docs *.tsbuildinfo",
+    "test:watch": "jest --passWithNoTests --watch",
+    "coverage": "jest --passWithNoTests --coverage",
+    "lint": "eslint . --ext .ts ",
+    "lint:fix": "eslint . --ext .ts  --fix",
+    "precommit": "lint-staged",
+    "docs": "typedoc --out ./docs ./src/index.ts"
+  },
+  "dependencies": {
+    "@blockstrait/bsvalias-core": "^0.1.0",
+    "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.5",
+    "ts-jest": "^27.1.2",
+    "jest-mock": "^27.4.2",
+    "typescript": "^4.5.4"
+  }
+}
