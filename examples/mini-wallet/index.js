@@ -68,7 +68,7 @@ async function getUtxos(address) {
   return utxos;
 }
 
-async function transferBsvToPaymail(handle, satoshis) {
+async function transferBsvToPaymail(handle, satoshis, taalBearerToken) {
   let xprv = await readHdPrivateKey();
 
   if (xprv === null) {
@@ -109,6 +109,7 @@ async function transferBsvToPaymail(handle, satoshis) {
 
   const mapiClient = new MapiClient({
     baseUrl: 'https://mapi.taal.com',
+    bearerToken: taalBearerToken
   });
 
   const paymentsClient = new PaymentsClient();
@@ -154,9 +155,10 @@ async function transferBsvToPaymail(handle, satoshis) {
 
 function main() {
   yargs
-    .command('$0 send <paymail> <satoshis>', 'Mini wallet', {}, argv => {
+    .command('$0 send <paymail> <satoshis> <taal_bearer_token>', 'Mini wallet', {}, argv => {
       // TODO: arguments not used
-      transferBsvToPaymail(argv.paymail, argv.satoshis);
+      console.log(argv)
+      transferBsvToPaymail(argv.paymail, argv.satoshis, argv.taal_bearer_token);
     })
     .help().argv;
 }
