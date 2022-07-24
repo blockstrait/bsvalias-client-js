@@ -1,6 +1,6 @@
 {
   "name": "@blockstrait/bsvalias-mini-wallet-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "author": "Pol Moreno Yeste",
   "main": "index.js",
@@ -8,8 +8,8 @@
     "start": "node ./index.js"
   },
   "dependencies": {
-    "@blockstrait/bsvalias-core": "^0.1.0",
-    "@blockstrait/bsvalias-payments-client": "^0.1.0",
+    "@blockstrait/bsvalias-core": "^0.1.1",
+    "@blockstrait/bsvalias-payments-client": "^0.1.1",
     "@blockstrait/mapi-client": "^0.1.2",
     "axios": "^0.27.2",
     "bsv": "^1.5.6",
